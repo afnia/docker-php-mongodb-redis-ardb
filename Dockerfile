@@ -10,7 +10,7 @@ ENV PHPIZE_DEPS \
 RUN apk update && apk --no-cache add supervisor nginx curl openssl-dev openssh-client
 RUN apk add --no-cache php7 php7-fpm php7-json php7-openssl php7-curl \
     php7-xml php7-phar php7-intl php7-xmlreader php7-ctype \
-    php7-mbstring php7-gd php7-pear php7-dev php-intl $PHPIZE_DEPS && \
+    php7-mbstring php7-gd php7-pear php7-dev php7-intl $PHPIZE_DEPS && \
     pecl install mongodb \
     pecl clear-cache && \
     apk --repository http://dl-3.alpinelinux.org/alpine/edge/testing/ --update add git rsync && \
